@@ -17,6 +17,12 @@
                 visibility: hidden;
                 transition: opacity .5s ease;
             }
+
+            img {
+                    height: 18px;
+                    width: auto;
+                }
+            }
         }
     }
 
@@ -65,4 +71,3 @@
             letter-spacing: 0;
         }
     }
-}
