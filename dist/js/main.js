@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-tab-button]"),document.querySelectorAll("[data-faq-question]");let e=document.querySelector(".hero").clientHeight;window.addEventListener("scroll",function(){(window.scrollY>e?ocultaElementoDoHeader:exibeElementosDoHeader)()})});
