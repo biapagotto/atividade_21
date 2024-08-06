@@ -3,6 +3,7 @@
 @use 'hero';
 @use 'conteudo';
 @use 'shows';
+@use 'footer';
 
 * {
     margin: 0;
@@ -17,7 +18,6 @@ body {
     color: variaveis.$corTextoSecundario;
 }
 
-/* Header */
 .header {
     background-color: variaveis.$corDeFundoBotaoPrimario;
     color: variaveis.$corTextoSecundario;
@@ -69,42 +69,4 @@ body {
 
 .title--small {
     font-size: 1.5rem;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer__links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.footer__links__item a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer__links__item a:hover {
-    color: #ddd;
-}
-
-.footer__contact {
-    margin: 10px 0;
-}
-
-.footer__credits {
-    font-size: 0.8rem;
-    color: #bbb;
 }

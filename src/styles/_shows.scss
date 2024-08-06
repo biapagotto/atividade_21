@@ -3,25 +3,38 @@
 .shows {
     padding: 2vw 5.6vw;
     min-height: 50vw;
+    background-color: variaveis.$corDeFundoSecundario;
+    color: variaveis.$corDeFundoBotaoSecundario;
 
     &__list {
         margin-top: 44px;
         display: none;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
 
-            @media (max-width: 768px) {
-                grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
 
-            &--is-active {
-                display: grid;
-            }
-
-        &__Item {
             img {
-                max-width: 100%;
-                border-radius: 4px;
+                width: 100%;
+                height: auto;
+                display: block;
             }
         }
     }
@@ -29,31 +42,37 @@
     &__tabs {
         display: flex;
         justify-content: center;
+        margin-bottom: 20px;
 
         @media (max-width: 768px) {
             white-space: nowrap;
-            overflow-x: scroll;
+            overflow-x: auto;
             padding-left: 20px;
+            margin-bottom: 10px;
         }
 
         &__button {
             color: variaveis.$corDeFundoBotaoPrimario;
             font-size: 20px;
+            font-weight: bold;
             border: none;
-            padding-bottom: 5px;
+            padding: 5px 10px;
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
             cursor: pointer;
-            border-bottom: 5px solid transparent;
-            
-            &--is-active {
-                border-color: variaveis.$corDeFundoBotaoSecundario;
-                }
+            border-bottom: 3px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
 
-                @media (max-width: 768px) {
-                    font-size: 16px;
-                }
+            &:hover, &--is-active {
+                color: variaveis.$corDeFundoBotaoPrimario;
+                border-color: variaveis.$corDeFundoBotaoPrimario;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                padding: 5px 8px;
             }
         }
     }
+}

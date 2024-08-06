@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+.footer {
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    color: variaveis.$corTextoSecundario;
+    padding: 20px 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer__links__item a {
+    color: variaveis.$corTextoSecundario;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__links__item a:hover {
+    color: variaveis.$corTextoSecundario;
+}
+
+.footer__contact {
+    margin: 10px 0;
+}
+
+.footer__credits {
+    font-size: 0.8rem;
+    color: variaveis.$corTextoSecundario;
+}
